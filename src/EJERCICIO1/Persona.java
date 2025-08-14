@@ -60,6 +60,7 @@ public class Persona {
 	private void setEmail(String email) {
 		this.email = email;
 	}
+	
 	@Override
 	public String toString() {
 		return "Persona [getDni()=" + getDni() + ", getNombre()=" + getNombre() + ", getApellido()=" + getApellido()
