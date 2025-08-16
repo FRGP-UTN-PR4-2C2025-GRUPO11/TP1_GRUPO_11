@@ -14,6 +14,8 @@ public class Persona {
 
 	// Construstors
 	public Persona() {
+		this.nombre = "Sin nombre";
+		this.fechaNacimiento = LocalDate.parse("2025-01-01");
 	};
 
 	public Persona(String dni, String nombre, String apellido,
@@ -63,8 +65,8 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [getDni()=" + getDni() + ", getNombre()=" + getNombre() + ", getApellido()=" + getApellido() + ", getFechaNacimiento()=" + getFechaNacimiento() + ", getGenero()=" + getGenero()
-		    + ", getDireccion()=" + getDireccion() + ", getTelefono()=" + getTelefono() + ", getEmail()=" + getEmail() + "]";
+		return "Persona [DNI=" + getDni() + ", NOMBRE=" + getNombre() + ", APELLIDO=" + getApellido() + ", FECHA DE NACIMIENTO=" + getFechaNacimiento() + ", GENERO=" + getGenero()
+		    + ", DIRECCION=" + getDireccion() + ", TELEFONO=" + getTelefono() + ", EMAIL=" + getEmail() + "]";
 	}
 
 }

@@ -1,9 +1,11 @@
 package EJERCICIO1;
 
+import java.time.LocalDate;
+
 public class Empleado extends Persona {
 	private final int legajo;
 	private String puesto;
-	static int contador=1000;
+	static int contador=999;
 
 	// Constructors:
 	public Empleado() {
@@ -12,7 +14,7 @@ public class Empleado extends Persona {
 		this.legajo = contador;
 	}
 
-	public Empleado(String dni, String nombre, String apellido, java.time.LocalDate
+	public Empleado(String dni, String nombre, String apellido, LocalDate
 			fechaNacimiento, String genero, String direccion, String telefono, String email,
 			 String puesto) {
 		super(dni, nombre, apellido, fechaNacimiento, genero, direccion, telefono, email);
@@ -26,10 +28,6 @@ public class Empleado extends Persona {
 		return legajo;
 	}
 
-	///public void setLegajo(int legajo) {
-	///	this.legajo = legajo;
-	///}
-
 	public String getPuesto() {
 		return puesto;
 	}
@@ -41,7 +39,7 @@ public class Empleado extends Persona {
 	// to string
 	@Override
 	public String toString() {
-		return "Empleado [legajo=" + legajo + ", puesto=" + puesto + "]" + super.toString();
+		return super.toString() + "\nEmpleado [LEGAJO=" + legajo + ", PUESTO=" + puesto + "]\n";
 	}
 
 	//metodo estatico
