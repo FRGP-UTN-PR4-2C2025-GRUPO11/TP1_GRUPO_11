@@ -43,4 +43,10 @@ public class Empleado extends Persona {
 	public String toString() {
 		return "Empleado [legajo=" + legajo + ", puesto=" + puesto + "]" + super.toString();
 	}
+
+	//metodo estatico
+	
+	public static int devuelveProximoLegajo() {
+		return contador+1;
+	}
 }
