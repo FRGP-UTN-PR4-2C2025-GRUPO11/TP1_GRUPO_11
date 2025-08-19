@@ -47,4 +47,17 @@ public class Empleado extends Persona {
 	public static int devuelveProximoLegajo() {
 		return contador+1;
 	}
+
+	public static void listadoEmpleados(Empleado[] vEmpleados) {
+		if (vEmpleados == null || vEmpleados.length == 0) {
+	        System.out.println("No hay empleados para mostrar.");
+	        return;
+	    }
+		
+		for (Empleado e : vEmpleados)
+		{
+			System.out.println(e.toString());
+		}
+		System.out.println("El próximo legajo será el " + Empleado.devuelveProximoLegajo());
+	}
 }
