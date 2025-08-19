@@ -12,11 +12,13 @@ public class Principal {
 		vEmpleados[3] = new Empleado("44.444.444", "Martin", "Rodriguez", LocalDate.parse("2005-02-02"), "M", "Rivadavia 3", "456", "martin@example.com", "Scrum Master");
 		vEmpleados[4] = new Empleado();
 		
-		for (Empleado e : vEmpleados)
+		Empleado.listadoEmpleados(vEmpleados);
+		
+		/*for (Empleado e : vEmpleados)
 		{
 			System.out.println(e.toString());
 		}
-		System.out.println("El próximo legajo será el " + Empleado.devuelveProximoLegajo() );
+		System.out.println("El próximo legajo será el " + Empleado.devuelveProximoLegajo() );*/
 		
 	}
 }
