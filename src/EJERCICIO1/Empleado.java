@@ -2,6 +2,9 @@ package EJERCICIO1;
 
 import java.time.LocalDate;
 
+/**
+ * 
+ */
 public class Empleado extends Persona {
 	private final int legajo;
 	private String puesto;
@@ -23,7 +26,7 @@ public class Empleado extends Persona {
 		this.puesto = puesto;
 	}
 
-	// Gettters and setters
+	// Getters and setters
 	public int getLegajo() {
 		return legajo;
 	}
@@ -73,6 +76,37 @@ public class Empleado extends Persona {
 				System.out.println(e.toString());
 			}
 		}
+	}
+	
+
+	
+	/**
+	 * Método abstracto que lista los empleados filtrados por palabra clave y los imprime en consola.
+	 * @param vEmpleados vector con el listado de empleados
+	 * @param palabraClave palabra clave a buscar
+	 * Imprime el resultado en consola
+	 */
+	public static void listadoEmpleados(Empleado[] vEmpleados, String palabraClave) {
+		if (vEmpleados == null || vEmpleados.length == 0) {
+	        System.out.println("No hay empleados para mostrar.");
+	        return;
+	    }
+		int contador = 1;
+		for (Empleado e : vEmpleados)
+		{
+			if ( ( e.getApellido() != null && e.getApellido().contains(palabraClave) ) || 
+					( e.getNombre() != null && e.getNombre().contains(palabraClave) ) || 
+					( e.getDireccion() != null && e.getDireccion().contains(palabraClave) ) || 
+					( e.getDni() != null && e.getDni().contains(palabraClave) ) ||
+					( e.getPuesto() != null && e.getPuesto().contains(palabraClave) ) 
+				)
+			{
+				System.out.println(contador + ". " + e.toString());
+				contador++;
+			}
+		}
+		contador--;
+		System.out.println("Se encontraron " + contador + " resultados que coinciden con '" + palabraClave+ "'.");
 	}
 
 

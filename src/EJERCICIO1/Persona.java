@@ -31,35 +31,35 @@ public class Persona {
 		this.email = email;
 	}
 
-	private String getDni() {
+	public String getDni() {
 		return dni;
 	}
 
-	private String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	private String getApellido() {
+	public String getApellido() {
 		return apellido;
 	}
 
-	private LocalDate getFechaNacimiento() {
+	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	private String getGenero() {
+	public String getGenero() {
 		return genero;
 	}
 
-	private String getDireccion() {
+	public String getDireccion() {
 		return direccion;
 	}
 
-	private String getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
 
-	private String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
