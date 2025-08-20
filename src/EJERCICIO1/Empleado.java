@@ -22,7 +22,7 @@ public class Empleado extends Persona {
 		this.legajo = contador;
 		this.puesto = puesto;
 	}
-	
+
 	// Gettters and setters
 	public int getLegajo() {
 		return legajo;
@@ -43,7 +43,7 @@ public class Empleado extends Persona {
 	}
 
 	//metodo estatico
-	
+
 	public static int devuelveProximoLegajo() {
 		return contador+1;
 	}
@@ -53,11 +53,27 @@ public class Empleado extends Persona {
 	        System.out.println("No hay empleados para mostrar.");
 	        return;
 	    }
-		
+
 		for (Empleado e : vEmpleados)
 		{
 			System.out.println(e.toString());
 		}
-		System.out.println("El próximo legajo será el " + Empleado.devuelveProximoLegajo());
 	}
+
+	public static void buscarEmpleadoPorLegajo(Empleado[] vEmpleados, int legajo) {
+		if (vEmpleados == null || vEmpleados.length == 0) {
+	        System.out.println("No hay empleados para mostrar.");
+	        return;
+	    }
+
+		for (Empleado e : vEmpleados)
+		{
+			if(e.getLegajo() == legajo)
+			{
+				System.out.println(e.toString());
+			}
+		}
+	}
+
+
 }

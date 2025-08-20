@@ -11,14 +11,12 @@ public class Principal {
 		vEmpleados[2] = new Empleado("33.333.333", "Gabriel", "Erizaga", LocalDate.parse("2005-01-01"), "M", "Belgrano 2", "345", "gabriel@example.com", "PM");
 		vEmpleados[3] = new Empleado("44.444.444", "Martin", "Rodriguez", LocalDate.parse("2005-02-02"), "M", "Rivadavia 3", "456", "martin@example.com", "Scrum Master");
 		vEmpleados[4] = new Empleado();
-		
+
 		Empleado.listadoEmpleados(vEmpleados);
-		
-		/*for (Empleado e : vEmpleados)
-		{
-			System.out.println(e.toString());
-		}
-		System.out.println("El próximo legajo será el " + Empleado.devuelveProximoLegajo() );*/
-		
+
+		System.out.println("El próximo legajo será el " + Empleado.devuelveProximoLegajo());
+
+		System.out.println("");
+		Empleado.buscarEmpleadoPorLegajo(vEmpleados, 1000);
 	}
 }
